@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Technico</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1><strong>Tech</strong>nico</h1>
+    <form id="predictForm">
+      <label>Idade: <input type="number" name="age" required></label>
+      <label>Minutos por Partida: <input type="number" name="min_per_match" required></label>
+      <label>Gols: <input type="number" name="goals" required></label>
+      <label>Assistências: <input type="number" name="assists" required></label>
+      <label>Cartões Recebidos: <input type="number" name="total_cards" required></label>
+      <button type="submit">Posicionar</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="../static/script.js"></script>
+</body>
+</html>
