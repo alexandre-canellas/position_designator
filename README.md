@@ -49,6 +49,7 @@ python app.py
 
 ### Threshold definido
 F1 Score (macro): ≥ 0.70
+Accuracy: ≥ 0.70
 
 ### Executando o teste
 
@@ -64,5 +65,5 @@ Crie um arquivo .env na pasta raíz do repositório com uma variáve model:
 model = 'tree'
 ```
 
-O modelo 'tree' é o modelo que atende aos requisitos do teste (f1-score >= 0.7).
+O modelo 'tree' é o modelo que atende aos requisitos do teste (f1-score >= 0.7 e acurácia >= 0.7).
 Caso queira simular um modelo que falhe nos testes, basta substituir o valor por 'knn'

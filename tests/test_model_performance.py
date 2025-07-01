@@ -1,6 +1,6 @@
 import joblib
 import pandas as pd
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score, accuracy_score
 from dotenv import load_dotenv
 import os
 
@@ -8,6 +8,7 @@ load_dotenv()
 
 # Parâmetros definidos
 F1_THRESHOLD = 0.70
+ACC_THRESHOLD = 0.70
 MODEL_PATH = "models"
 
 def test_model_performance():
@@ -26,9 +27,12 @@ def test_model_performance():
 
     # Métricas
     f1 = f1_score(y, y_pred, average="macro")
+    acc = accuracy_score(y, y_pred)
 
-    print(f"\nF1 Score (macro): {f1:.3f}")
+    print(f"\nF1 Score (macro): {f1:.2f}")
+    print(f"Accuracy: {acc:.2f}")
     
     # Asserts para validação de qualidade
-    assert f1 >= F1_THRESHOLD, f"F1 Score abaixo do limite: {f1:.3f} < {F1_THRESHOLD}"
+    assert round(f1,2) >= F1_THRESHOLD, f"F1 Score abaixo do limite: {f1:.2f} < {F1_THRESHOLD}"
+    assert round(acc,2) >= ACC_THRESHOLD, f"Acurácia abaixo do limite: {acc:.2f} < {ACC_THRESHOLD}"
     
