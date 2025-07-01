@@ -55,4 +55,13 @@ F1 Score (macro): ≥ 0.70
 pytest tests/test_model_performance.py -v
 ```
 
-## 🧪 Testes Automatizados
+## 🧪 Requisitos minimos
+
+Crie um arquivo .env na pasta raíz do repositório com uma variáve model:
+
+```bash
+model = 'tree'
+```
+
+O modelo 'tree' é o modelo que atende aos requisitos do teste (f1-score >= 0.7).
+Caso queira simular um modelo que falhe nos testes, basta substituir o valor por 'knn'
