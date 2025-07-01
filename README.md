@@ -49,6 +49,7 @@ python app.py
 
 ### Threshold definido
 F1 Score (macro): ≥ 0.70
+
 Accuracy: ≥ 0.70
 
 ### Executando o teste
