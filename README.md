@@ -5,9 +5,9 @@ Projeto open source com teste integrado com threshold de f1-score!
 
 ---
 
-## 📦 Arquitetura do Repositório
+## 🗂️ Arquitetura do Repositório
 
-
+```
 ├── app.py                                      # Flask app com carregamento do modelo e rota de predição
 ├── models/
 │ ├── tree_model.pkl                            # Modelo pre treinado de Árvore de Decisão (scikit-learn)
@@ -25,6 +25,7 @@ Projeto open source com teste integrado com threshold de f1-score!
 │ └── test_model_performance.py                 # PyTest com F1 score threshold
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
@@ -55,7 +56,7 @@ F1 Score (macro): ≥ 0.70
 pytest tests/test_model_performance.py -v
 ```
 
-## 🧪 Requisitos minimos
+## 📌 Requisitos minimos
 
 Crie um arquivo .env na pasta raíz do repositório com uma variáve model:
 
